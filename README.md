@@ -1,3 +1,5 @@
+This bundle will add a simple *Services* panel in the Symfony2 WebProfiler. Through this panel it is possible to inspect which services are registered inside the Dependency Injection Container. Future releases will add features like using Reflection on this services.
+
 To install this bundle just do the following:
 
 * Add it in a suitable folder of your project
