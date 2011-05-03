@@ -1,0 +1,39 @@
+{% extends 'WebProfilerBundle:Profiler:layout.html.twig' %}
+
+{#{% block toolbar %}
+    
+{% endblock %}#}
+
+{# {% block head %} #}
+    {# if the web profiler panel needs some specific JS or CSS files #}
+{# {% endblock %} #}
+
+{% block menu %}
+    <span class="label">
+        <span class="icon"><img src="{{ asset('bundles/serviceprofiler/images/service.png') }}" alt="Services" /></span>
+        <strong>Services</strong>
+    </span>
+{% endblock %}
+
+{% block panel %}
+    
+<h2>
+    Services registered in the container
+</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Service ID</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for serviceId in collector.services %}
+            <tr>
+                <td>{{ serviceId }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
